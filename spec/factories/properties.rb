@@ -2,8 +2,6 @@
 
 FactoryGirl.define do
   factory :property do
-    lot_size "9.99"
-    propertible_id 1
-    propertible_type "MyString"
+    lot_size "900.99"
   end
 end
