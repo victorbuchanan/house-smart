@@ -1,17 +1,106 @@
-<%= form_for(@house) do |f| %>
-  <% if @house.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@house.errors.count, "error") %> prohibited this house from being saved:</h2>
-
-      <ul>
-      <% @house.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= form_for @house do |f| %>
+ <% if @house.errors.any? %>
+    <div id='error_explanation' >
+      <h2><% "#{pluralize(@house.errors.count, "error")}"%></h2>
+          prohibited this house from being saved:"
+          <ul>
+            <% @house.errors.full_messages.each do |msg|%>
+              <li>
+                <%=msg%>
+              </li>
+          </ul>
+          <%end%>          
     </div>
-  <% end %>
+  <%end%>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+
+
+<div class='house-form well'>
+    <%= f.fields_for :property do |builder| %>
+        <table>
+            <tr>
+                <td>
+                    <%= builder.label :lot_size %>
+                </td>
+                <td>
+                    <%= builder.text_field :lot_size%>
+                </td>
+          </tr>
+                <tr>
+                    <td>
+                          number of rooms:
+                    </td>
+                    <td>
+                          <%= text_field_tag "number of rooms"%>
+                    </td>
+          </tr>
+           <tr>
+              <td>
+                  number of bathrooms:
+              </td>
+              <td>
+                  <%= text_field_tag "number of bathrooms"%>
+              </td>
+          </tr>
+          <tr>
+              <td>
+
+
+              </td>
+
+      </table>  
+</div>
+
+
+      <div class="features">
+          <b> Feature </b>
+          <table>
+              <%["wooden floor", "chimeny", "pool", "garden"].each do |feature|%>
+                <tr>
+                    <td><%="#{feature}"%></td>
+                    <td><%=check_box_tag feature%></td>
+                </tr>
+
+              <%end%>     
+
+          </table>
+          
+
+          <table>
+            <tr>
+                    <td><%= button_to "Cancel", "#", class: "btn"%></td>
+                    <td><%= f.submit "save", class: "btn"%></td>
+            </tr>
+          </table>
+
+
+      </div>
+
+
+          
+
+  
+  <%end%>
+
+
+          
+                
+              
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%end%>
+
+
