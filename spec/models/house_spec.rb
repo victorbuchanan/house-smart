@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe House do
-  pending "add some examples to (or delete) #{__FILE__}"
 
   context "associations" do
     it "should extend Property" do  #polymorphism
@@ -18,4 +17,28 @@ describe House do
     end
 
   end
+
+
+
+
+  context "constancts" do
+    it "DWELLING_TYPE array should contain the following values" do
+        
+        EXPECTED= ["1 1/2 story", "2 story", "3 story", "bungalow", "one level",
+                   "one level", "split level"]
+        
+        House::DWELLING_TYPE.size.should == EXPECTED.size
+        EXPECTED.each{|type| (House::DWELLING_TYPE.include? type).should be_true}
+    end
+
+    it "STYLE array should contain the following values" do
+        
+        EXPECTED= ["Apartment", "Detached", "Row unit", "Semi Detached"]
+        
+        House::STYLE.size.should == EXPECTED.size
+        EXPECTED.each{|type| (House::STYLE.include? type).should be_true}
+    end
+  end
+
+
 end
