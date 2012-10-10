@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f836496-01f2-47f6-a6f4-974380870b9c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/house.rb" afterPath="$PROJECT_DIR$/app/models/house.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/factories/houses.rb" afterPath="$PROJECT_DIR$/spec/factories/houses.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/house_spec.rb" afterPath="$PROJECT_DIR$/spec/models/house_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="house-smart.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +25,29 @@
         <entry file="file://$PROJECT_DIR$/app/views/houses/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
+              <folding>
+                <marker date="1349318254000" expanded="true" signature="90:400" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="222:361" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="300:345" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="443:1269" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="506:1260" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="523:731" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="544:617" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="638:715" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="752:978" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="777:846" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="871:962" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="994:1188" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="1013:1072" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="1091:1172" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="1203:1252" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="1222:1244" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="1300:1858" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="1345:1621" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="1448:1573" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="1651:1843" placeholder="..." />
+                <marker date="1349318254000" expanded="true" signature="1668:1824" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,10 +61,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="house_spec.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="house_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/models/house_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="6" selection-start="1167" selection-end="1167" vertical-scroll-proportion="1.8384401">
+            <state line="44" column="6" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="2" selection-start="496" selection-end="496" vertical-scroll-proportion="0.4178273">
               <folding />
             </state>
           </provider>
@@ -87,6 +113,7 @@
         <option value="$PROJECT_DIR$/spec/models/house_spec.rb" />
         <option value="$PROJECT_DIR$/app/models/house.rb" />
         <option value="$PROJECT_DIR$/spec/factories/houses.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -637,13 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/houses/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -682,7 +702,29 @@
     <entry file="file://$PROJECT_DIR$/app/views/houses/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1349318254000" expanded="true" signature="90:400" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="222:361" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="300:345" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="443:1269" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="506:1260" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="523:731" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="544:617" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="638:715" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="752:978" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="777:846" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="871:962" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="994:1188" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="1013:1072" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="1091:1172" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="1203:1252" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="1222:1244" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="1300:1858" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="1345:1621" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="1448:1573" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="1651:1843" placeholder="..." />
+            <marker date="1349318254000" expanded="true" signature="1668:1824" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -716,7 +758,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/house_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="6" selection-start="1167" selection-end="1167" vertical-scroll-proportion="1.8384401">
+        <state line="44" column="6" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="2" selection-start="496" selection-end="496" vertical-scroll-proportion="0.4178273">
           <folding />
         </state>
       </provider>
