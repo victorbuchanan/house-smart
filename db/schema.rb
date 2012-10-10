@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121003185030) do
+ActiveRecord::Schema.define(:version => 20121010150813) do
 
   create_table "features", :force => true do |t|
     t.string   "name"
@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(:version => 20121003185030) do
   end
 
   create_table "houses", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "dwelling_type"
+    t.string   "style"
   end
 
   create_table "properties", :force => true do |t|
