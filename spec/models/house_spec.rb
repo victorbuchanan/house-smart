@@ -19,8 +19,6 @@ describe House do
   end
 
 
-
-
   context "constants" do
     it "DWELLING_TYPE array should contain the following values" do
         
@@ -43,7 +41,7 @@ describe House do
 
   context "validations" do
 
-     [:style, :dwelling_type].each do |attr|
+     [:style, :dwelling_type, :property_attributes].each do |attr|
        it "#{attr} may be accessed and changed" do
          expect do
            House.new(attr => nil)

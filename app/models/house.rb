@@ -1,5 +1,5 @@
 class House < ActiveRecord::Base
-   attr_accessible :style, :dwelling_type
+   attr_accessible :style, :dwelling_type, :property_attributes
 
   #CONSTANTS
   DWELLING_TYPE= ["1 1/2 story", "2 story", "3 story", "bungalow", "one level",
@@ -10,7 +10,6 @@ class House < ActiveRecord::Base
  #-----------------------------------------------------------------
 
 
-  attr_accessible :property_attributes
 
   validates :style, inclusion: STYLE
   validates :dwelling_type, inclusion: DWELLING_TYPE
