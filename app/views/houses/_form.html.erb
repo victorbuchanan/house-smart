@@ -15,20 +15,20 @@
 
 
 
-<div class='house-form well'>
+<div>
     <%= f.fields_for :property do |builder| %>
         <table>
             <tr>
                 <td>
-                    <%= builder.label :lot_size %>
+                    <%= builder.label :lot_size %>:
                 </td>
                 <td>
-                    <%= builder.text_field :lot_size%>
+                    <%= builder.text_field :lot_size %>
                 </td>
           </tr>
                 <tr>
                     <td>
-                          number of rooms:
+                          Number of rooms:
                     </td>
                     <td>
                           <%= text_field_tag "number of rooms"%>
@@ -36,7 +36,7 @@
           </tr>
            <tr>
               <td>
-                  number of bathrooms:
+                  Number of bathrooms:
               </td>
               <td>
                   <%= text_field_tag "number of bathrooms"%>
@@ -53,54 +53,29 @@
 
 
       <div class="features">
-          <b> Feature </b>
+          
+          <h2>Features</h2>
+          
           <table>
-              <%["wooden floor", "chimeny", "pool", "garden"].each do |feature|%>
+              <%["Wooden Floor", "Chimeney", "Pool", "Garden"].each do |feature|%>
                 <tr>
                     <td><%="#{feature}"%></td>
-                    <td><%=check_box_tag feature%></td>
+                    <td><%=check_box_tag feature, :class => "squaredFour" %></td>
                 </tr>
-
               <%end%>     
-
           </table>
           
 
           <table>
             <tr>
-                    <td><%= button_to "Cancel", "#", class: "btn"%></td>
-                    <td><%= f.submit "save", class: "btn"%></td>
+                <td><%= button_to "Cancel", "#", :class => "g-button blue" %></td>
+                <td><%= f.submit "Save", :class => "g-button blue" %></td>
             </tr>
           </table>
 
 
       </div>
-
-
-          
-
   
   <%end%>
 
-
-          
-                
-              
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <%end%>
-
-
