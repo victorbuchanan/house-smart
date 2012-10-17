@@ -9,7 +9,7 @@ gem 'pg'
 #gem 'sqlite3'
 
 
-
+gem 'geocoder'   # for searching by address
 
 
 group :test, :development do
