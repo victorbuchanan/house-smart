@@ -2,6 +2,7 @@
 
 FactoryGirl.define do
   factory :property do
-    lot_size "900.99"
+    lot_size [900.99, 500, 1200, 3000, 5000].sample
+
   end
 end
