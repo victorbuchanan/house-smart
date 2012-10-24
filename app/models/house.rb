@@ -20,8 +20,8 @@ class House < ActiveRecord::Base
    has_one :property, :as => :propertible, :dependent => :destroy 
    accepts_nested_attributes_for :property, :allow_destroy => true
 
-
-
-
+  ## for photos
+   has_attached_file :photo
+   attr_accessible :photo
 
 end
