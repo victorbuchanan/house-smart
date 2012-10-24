@@ -28,4 +28,28 @@ class Property < ActiveRecord::Base
     near(address, radius, :order => :distance)
   end
 
+
+
+  #---------search-------------------
+
+  def self.all_properties_of_type(type)
+    properties = Property.order(&:id)
+    if (Property.all.collect(&:propertible_type).uniq.include? type)
+      properties = properties.where(propertible_type: type)
+    end
+    properties
+  end
+
+
+
+
+  def self.search_properties(options={})
+ #-------------
+ #  properties = properties.near(criteria['address']) if criteria['address'] && !criteria['address'].empty?
+
+   properties
+
+  end
+
 end
+

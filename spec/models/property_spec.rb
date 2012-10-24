@@ -88,5 +88,38 @@ describe Property do
 
 
 
+
+
+
+  context "search properties" do
+    before(:each) do
+      @empty_adv_search_form = {"type"=>"", "address"=>"" }
+    end
+
+    it "function all_properties_of_type(type) should output properties that has :propertible_type equal to the given type " do  # if user wants houses, search for houses only
+       #initialize
+       20.times{ ([true, false].sample)? FactoryGirl.create(:property): FactoryGirl.create(:house)}  # this test may be modified in future
+       total_houses_in_db = House.all.size
+       total_properties_in_db = Property.all.size
+
+       #test valid input, scenario 1: show all properties
+      search_results = Property.all_properties_of_type("anything")
+      search_results.size.should == total_properties_in_db
+
+      #test valid input, scenario 2: show properties of specific type
+      search_results = Property.all_properties_of_type("House")
+      search_results.size.should == total_houses_in_db
+
+
+
+
+
+
+
+    end
+
+  end
+
+
 end
 
