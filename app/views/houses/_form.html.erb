@@ -14,6 +14,27 @@
   <%end%>
 
 
+<div>
+    <table>
+            <tr>
+                <td>
+                  Dwelling type:
+                </td>
+                <td>
+                  <%= f.select :dwelling_type, House::DWELLING_TYPE%>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                Style:
+                </td>
+                <td>
+                <%= f.select :style, House::STYLE%>
+                </td>
+      </tr>
+
+    </table>
+</div>
 
 <div>
     <%= f.fields_for :property do |builder| %>
@@ -26,7 +47,7 @@
                     <%= builder.text_field :lot_size %>
                 </td>
           </tr>
-                <tr>
+          <tr>
                     <td>
                           Number of rooms:
                     </td>
