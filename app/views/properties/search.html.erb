@@ -1,0 +1,19 @@
+<%= form_tag properties_path, method: "get" do%>
+
+
+    <%= label_tag "type of property"%>
+    <%= select_tag "type", options_for_select(['All','House'])%>
+
+    <br/>
+    <%= label_tag "lot size lower bound"%>
+    <%= select_tag "lot_size_lower", options_for_select([100,200, 300, 500, 700, 1000, 1200, 1400, 3000, 4000,5000])%>
+    <br/>
+    <%=label_tag "lot size upper bound"%>
+    <%=select_tag "lot_size_upper", options_for_select([100,200, 300, 500, 700, 1000, 1200, 1400,3000,4000,5000])%>
+
+    <br/>
+    <%= label_tag "address"%>
+    <%= text_field_tag "address"%>
+
+    <%=  submit_tag "submit" %>
+<%end%>

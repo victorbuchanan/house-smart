@@ -3,7 +3,10 @@ HouseSmart::Application.routes.draw do
 
   resources :features
 
-  resources :properties
+  resources :properties do
+    get 'search', :on=> :collection
+    post 'search_results'
+  end
 
   resources :users
 

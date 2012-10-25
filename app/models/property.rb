@@ -22,6 +22,33 @@ class Property < ActiveRecord::Base
 
 
 
+  #-------- queries------------------
+
+  scope :of_type, lambda {|type| where(:propertible_type => type)}
+
+  scope :with_lot_size, lambda {|lower, upper| where(["lot_size >= ? AND lot_size <= ?", lower, upper])}
+
+  scope :near_location, lambda {|location, radius| nearby_properties(location, radius)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   #----- methods -------------
   def self.nearby_properties(address, radius, options={}) #options not implemented.
@@ -32,22 +59,15 @@ class Property < ActiveRecord::Base
 
   #---------search-------------------
 
-  def self.all_properties_of_type(type)
-    properties = Property.order(&:id)
-    if (Property.all.collect(&:propertible_type).uniq.include? type)
-      properties = properties.where(propertible_type: type)
-    end
-    properties
-  end
-
-
 
 
   def self.search_properties(options={})
- #-------------
- #  properties = properties.near(criteria['address']) if criteria['address'] && !criteria['address'].empty?
 
-   properties
+    properties= Property.order(&:id)
+    properties = properties.of_type(options["type"]) if options["type"]  && options["type"] != "All"
+    properties = properties.with_lot_size(options["lot_size_lower"],options["lot_size_upper"]) if options["lot_size_lower"]  && options["lot_size_upper"]
+    properties
+
 
   end
 

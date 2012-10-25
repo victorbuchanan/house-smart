@@ -2,7 +2,12 @@ class PropertiesController < ApplicationController
   # GET /properties
   # GET /properties.json
   def index
-    @properties = Property.all
+
+     if params['commit']
+       @properties = Property.search_properties(params)
+     else
+       @properties = Property.all
+     end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -79,5 +84,11 @@ class PropertiesController < ApplicationController
       format.html { redirect_to properties_url }
       format.json { head :no_content }
     end
+  end
+
+
+
+  def search
+
   end
 end
