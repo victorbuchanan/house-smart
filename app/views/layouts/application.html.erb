@@ -7,6 +7,7 @@
 		<%= javascript_include_tag "application" %>
 		<%= csrf_meta_tags %>
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
+    <link href="<%= image_path("logo.png")  %>" rel="shortcut icon" />
 		
 	</head>
 	<body>
@@ -18,7 +19,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="#"><%= image_tag("logo.png") %></a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
               Logged in as <a href="#" class="navbar-link">Username</a>
