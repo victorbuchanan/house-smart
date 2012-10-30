@@ -64,3 +64,10 @@ body.bgColor {
 /*input[type=checkbox] {
 	visibility: hidden;
 }*/
+
+
+.main-content
+{
+    margin: 0 auto;
+    border: 1px solid black;
+}

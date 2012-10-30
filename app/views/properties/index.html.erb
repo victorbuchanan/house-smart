@@ -1,10 +1,27 @@
 <h1>Listing properties</h1>
 
+
+<div class= "simple-search-box">
+  <%= form_tag properties_path, method: "get", class: "form-inline" do%>
+      <%= label_tag "address"%>
+      <%= text_field_tag "address"%>
+      <%=  submit_tag "search", class:"btn" %>
+
+      <h6> <%= link_to "go to advanced search ", search_properties_path%></h6>
+
+
+
+<%end%>
+
+
+</div>
+
 <table>
   <tr>
     <th>Lot size</th>
     <th>Propertible</th>
     <th>Propertible type</th>
+    <th>Address</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +32,7 @@
     <td><%= property.lot_size %></td>
     <td><%= property.propertible_id %></td>
     <td><%= property.propertible_type %></td>
+    <td><%= property.address %></td>
     <td><%= link_to 'Show', property %></td>
     <td><%= link_to 'Edit', edit_property_path(property) %></td>
     <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -24,4 +42,4 @@
 
 <br />
 
-<%= link_to 'New Property', new_property_path %>
+<%-# link_to 'New Property', new_property_path %>
