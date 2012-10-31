@@ -1,4 +1,14 @@
 HouseSmart::Application.routes.draw do
+  get "static/welcome"
+
+  get "static/about"
+
+  get "static/contact_us"
+
+  get "static/help"
+
+  get "static/first_time_home_buyers"
+
   resources :houses
 
   resources :features
@@ -59,7 +69,7 @@ HouseSmart::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'properties#index'
+   root :to => 'static#welcome'
 
   # See how all your routes lay out with "rake routes"
 
