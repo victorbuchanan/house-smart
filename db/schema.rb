@@ -11,12 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121024160904) do
+ActiveRecord::Schema.define(:version => 20121106173915) do
 
   create_table "features", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "value"
   end
 
   create_table "houses", :force => true do |t|
@@ -28,6 +29,11 @@ ActiveRecord::Schema.define(:version => 20121024160904) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.integer  "bedrooms"
+    t.integer  "bathrooms"
+    t.integer  "living_area"
+    t.integer  "lot_size"
+    t.date     "year_build"
   end
 
   create_table "properties", :force => true do |t|

@@ -41,7 +41,7 @@ describe House do
 
   context "validations" do
 
-     [:style, :dwelling_type, :property_attributes].each do |attr|
+     [:style, :dwelling_type, :bedrooms, :bathrooms, :living_area, :lot_size, :year_build, :property_attributes].each do |attr|
        it "#{attr} may be accessed and changed" do
          expect do
            House.new(attr => nil)
