@@ -9,13 +9,16 @@ HouseSmart::Application.routes.draw do
 
   get "static/first_time_home_buyers"
 
-  resources :houses
+  resources :houses do
+    get 'estimation/form',action: 'estimation_form', :on=> :collection
+    post 'estimation/results', action: 'estimation_result', :on=> :collection
+  end
 
   resources :features
 
   resources :properties do
     get 'search', :on=> :collection
-    post 'search_results'
+
   end
 
   resources :users

@@ -8,9 +8,8 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *
- *= require_self
  *= require_tree .
+ *= require_self
  */
 /*
 h1, h2, h3, h4, h5, h6 {
@@ -66,8 +65,16 @@ body.bgColor {
 }*/
 
 
+html,body{height: 100%; padding-top: 0;}
 .main-content
 {
     margin: 0 auto;
+
+    padding-top: 60px;
+    padding-left: 20px; padding-right: 20px;
+
+    height: 100%;
+    width: 900px;
+
     border: 1px solid black;
 }

@@ -81,4 +81,12 @@ class HousesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def estimation_form
+    @house = House.new
+    @house.build_property
+  end
+
+  def estimation_result
+  end
 end
