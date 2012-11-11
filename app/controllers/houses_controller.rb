@@ -88,5 +88,6 @@ class HousesController < ApplicationController
   end
 
   def estimation_result
+    @house = House.new(params[:house])
   end
 end

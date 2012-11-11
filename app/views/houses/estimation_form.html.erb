@@ -1,0 +1,31 @@
+<div class='well'>
+
+    <%=form_for @house do |f|%>
+      <%= f.fields_for :property do |builder| %>
+        <ol>
+            <li>
+              <%= f.select :style, House::STYLE  %>
+                  <%= builder.label :address%>
+                  <%=builder.text_field :address%>
+            </li>
+            <li>
+              <%= f.label :bedrooms%>
+              <%=f.text_field :bedrooms%>
+
+              <%= f.label :bathrooms%>
+              <%=f.text_field :bathrooms%>
+
+              <%= f.label :living_area%>
+              <%=f.text_field :living_area%>
+
+              <%= builder.label :lot_size%>
+              <%= builder.text_field :lot_size%>
+            </li>
+            <li>
+              <%= f.submit "get your appraisal", class:"btn"%>
+            </li>
+        </ol>
+      <%end%>
+    <%end%>
+
+</div>

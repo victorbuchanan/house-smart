@@ -1,0 +1,61 @@
+<%= form_for(@area_base_price) do |f| %>
+  <% if @area_base_price.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@area_base_price.errors.count, "error") %> prohibited this area_base_price from being saved:</h2>
+
+      <ul>
+      <% @area_base_price.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :area_name %><br />
+    <%= f.text_field :area_name %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_sqft %><br />
+    <%= f.number_field :avg_sqft %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_lot %><br />
+    <%= f.number_field :avg_lot %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_year %><br />
+    <%= f.number_field :avg_year %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_bed %><br />
+    <%= f.number_field :avg_bed %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_bath %><br />
+    <%= f.number_field :avg_bath %>
+  </div>
+  <div class="field">
+    <%= f.label :price_per_sqft %><br />
+    <%= f.number_field :price_per_sqft %>
+  </div>
+  <div class="field">
+    <%= f.label :price_per_lot %><br />
+    <%= f.number_field :price_per_lot %>
+  </div>
+  <div class="field">
+    <%= f.label :price_per_year %><br />
+    <%= f.number_field :price_per_year %>
+  </div>
+  <div class="field">
+    <%= f.label :price_per_bed %><br />
+    <%= f.number_field :price_per_bed %>
+  </div>
+  <div class="field">
+    <%= f.label :price_per_bath %><br />
+    <%= f.number_field :price_per_bath %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

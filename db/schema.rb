@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121106173915) do
+ActiveRecord::Schema.define(:version => 20121110211244) do
+
+  create_table "area_base_prices", :force => true do |t|
+    t.string   "area_name"
+    t.integer  "avg_sqft"
+    t.integer  "avg_lot"
+    t.integer  "avg_year"
+    t.integer  "avg_bed"
+    t.integer  "avg_bath"
+    t.integer  "price_per_sqft"
+    t.integer  "price_per_lot"
+    t.integer  "price_per_year"
+    t.integer  "price_per_bed"
+    t.integer  "price_per_bath"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "features", :force => true do |t|
     t.string   "name"
