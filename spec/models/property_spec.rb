@@ -43,7 +43,7 @@ describe Property do
     end
 
     it"entering an address should populate the latitude and longitude accordingly" do
-      property = FactoryGirl.build(:property, address: "University of Ottawa")
+      property = FactoryGirl.build(:property_with_address, address: "University of Ottawa")
       property.latitude.should be_nil
       property.longitude.should be_nil
       property.save
@@ -54,7 +54,7 @@ describe Property do
 
   context "geocoding" do
     it "should repopulate the latitude and longitude after updating the address " do
-      property = FactoryGirl.build(:property, address: "University of Ottawa")
+      property = FactoryGirl.build(:property_with_address, address: "University of Ottawa")
       property.save
       uOttawa_latitude = property.latitude
       uOttawa_longitude = property.longitude
@@ -67,9 +67,9 @@ describe Property do
     it "should search and find properties that are nearby given an address and a radius" do
 
        # initialization, saving in DB
-       uOttawa = FactoryGirl.build(:property, address: "University of Ottawa")
-       carletonU = FactoryGirl.build(:property, address: "Carleton University")
-       uToronto = FactoryGirl.build(:property, address: "University of Toronto")
+       uOttawa = FactoryGirl.build(:property_with_address, address: "University of Ottawa")
+       carletonU = FactoryGirl.build(:property_with_address, address: "Carleton University")
+       uToronto = FactoryGirl.build(:property_with_address, address: "University of Toronto")
        [uOttawa,carletonU,uToronto].each{|u| u.save}
        Property.all.size.should == 3
 
