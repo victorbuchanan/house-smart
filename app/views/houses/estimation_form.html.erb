@@ -1,14 +1,38 @@
+<% if @house.errors.any? %>
+    <div class='alert-error'id='error_explanation' >
+      <h2><% "#{pluralize(@house.errors.count, "error")}"%></h2>
+      prohibited this house from being saved:"
+      <ul>
+        <% @house.errors.full_messages.each do |msg|%>
+            <li>
+              <%=msg%>
+            </li>
+            </ul>
+        <%end%>
+        </div>
+<%end%>
+
+
 <div class='well'>
 
     <%=form_for @house do |f|%>
       <%= f.fields_for :property do |builder| %>
         <ol>
             <li>
+
+              <%= f.label :dwelling_type%>
+              <%= f.select :dwelling_type, House::DWELLING_TYPE%>
+
+              <%= f.label :style%>
               <%= f.select :style, House::STYLE  %>
+
                   <%= builder.label :address%>
                   <%=builder.text_field :address%>
             </li>
             <li>
+              <%=f.label :square_footage%>
+              <%=f.text_field :square_footage%>
+
               <%= f.label :bedrooms%>
               <%=f.text_field :bedrooms%>
 
@@ -16,10 +40,13 @@
               <%=f.text_field :bathrooms%>
 
               <%= f.label :living_area%>
-              <%=f.text_field :living_area%>
+              <%=f.select :living_area, @areas%>
 
               <%= builder.label :lot_size%>
               <%= builder.text_field :lot_size%>
+
+              <%=f.label :year_built%>
+              <%=f.select :year_built, (1980..2012).to_a.reverse, selected: 2012%>
             </li>
             <li>
               <%= f.submit "get your appraisal", class:"btn"%>

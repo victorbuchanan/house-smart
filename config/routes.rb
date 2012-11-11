@@ -2,7 +2,7 @@ HouseSmart::Application.routes.draw do
 
   resources :area_base_prices
 
-  get "area_base_price/new
+  get "area_base_price/new"
 
   get "static/welcome"
 
@@ -16,7 +16,7 @@ HouseSmart::Application.routes.draw do
 
   resources :houses do
     get 'estimation/form',action: 'estimation_form', :on=> :collection
-    post 'estimation/results', action: 'estimation_result', :on=> :collection
+    get 'estimation/results/:id', action: 'estimation_results', :on=> :collection, as: :estimation_results
   end
 
   resources :features

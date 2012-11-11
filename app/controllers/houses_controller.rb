@@ -45,14 +45,13 @@ class HousesController < ApplicationController
 
     respond_to do |format|
       if @house.save
-        format.html { redirect_to @house, notice: 'House was successfully created.' }
-        format.json { render json: @house, status: :created, location: @house }
+        format.html { redirect_to estimation_results_houses_path(@house)}
       else
-        format.html { render action: "new" }
-        format.json { render json: @house.errors, status: :unprocessable_entity }
+        format.html { render 'estimation_form' }
       end
     end
   end
+
 
   # PUT /houses/1
   # PUT /houses/1.json
@@ -85,9 +84,10 @@ class HousesController < ApplicationController
   def estimation_form
     @house = House.new
     @house.build_property
+    @areas = AreaBasePrice.all.collect(&:area_name)
   end
 
-  def estimation_result
-    @house = House.new(params[:house])
+  def estimation_results
+    @house = House.find(params[:id])
   end
 end
