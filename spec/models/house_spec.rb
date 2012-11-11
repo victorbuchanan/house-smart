@@ -41,11 +41,22 @@ describe House do
 
   context "validations" do
 
-     [:style, :dwelling_type, :bedrooms, :bathrooms, :living_area, :lot_size, :year_build, :property_attributes].each do |attr|
+     [:style, :dwelling_type, :bedrooms, :bathrooms,:square_footage, :living_area, :year_built, :property_attributes].each do |attr|
        it "#{attr} may be accessed and changed" do
          expect do
            House.new(attr => nil)
          end.to_not raise_error(ActiveModel::MassAssignmentSecurity::Error)
+       end
+     end
+
+
+     [:style, :dwelling_type, :bedrooms, :bathrooms,:square_footage, :living_area, :year_built].each do |attr|
+       it "#{attr} should not be blank" do
+         house = FactoryGirl.build(:house, attr => nil)
+         house.should_not be_valid
+         house.errors.get(attr).should_not be_nil
+         house = FactoryGirl.build(:house)
+         house.should be_valid
        end
      end
 

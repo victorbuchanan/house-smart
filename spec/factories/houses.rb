@@ -5,6 +5,11 @@ FactoryGirl.define do
     style House::STYLE.sample
     dwelling_type House::DWELLING_TYPE.sample
 
+    living_area "kanata"
+    square_footage 1500
+    bedrooms 3
+    bathrooms 2
+    year_built 3.years.ago.to_date
     property_attributes {FactoryGirl.attributes_for(:property)}
 
 
