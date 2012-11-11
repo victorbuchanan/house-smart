@@ -1,4 +1,11 @@
 HouseSmart::Application.routes.draw do
+
+
+  resources :area_base_prices
+
+  get "area_base_price/new"
+
+
   get "static/welcome"
 
   get "static/about"
