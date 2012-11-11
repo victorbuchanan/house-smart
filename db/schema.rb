@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121110211244) do
+ActiveRecord::Schema.define(:version => 20121111050928) do
 
   create_table "area_base_prices", :force => true do |t|
     t.string   "area_name"
@@ -47,9 +47,10 @@ ActiveRecord::Schema.define(:version => 20121110211244) do
     t.datetime "photo_updated_at"
     t.integer  "bedrooms"
     t.integer  "bathrooms"
-    t.integer  "living_area"
+    t.string   "living_area"
     t.integer  "lot_size"
-    t.date     "year_build"
+    t.integer  "year_built"
+    t.integer  "square_footage"
   end
 
   create_table "properties", :force => true do |t|
