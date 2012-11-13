@@ -14,7 +14,7 @@
 		<div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="#"><%= image_tag("logo.png") %></a>
+          <%= link_to image_tag("logo.png"), root_url, class: "brand" %>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
               Logged in as <a href="#" class="navbar-link">Username</a>
