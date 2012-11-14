@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @contractor_feature.company_id %>
+</p>
+
+<p>
+  <b>Feature:</b>
+  <%= @contractor_feature.feature_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_contractor_feature_path(@contractor_feature) %> |
+<%= link_to 'Back', contractor_features_path %>

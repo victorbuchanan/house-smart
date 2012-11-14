@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121111050928) do
+ActiveRecord::Schema.define(:version => 20121114143056) do
 
   create_table "area_base_prices", :force => true do |t|
     t.string   "area_name"
@@ -29,11 +29,29 @@ ActiveRecord::Schema.define(:version => 20121111050928) do
     t.datetime "updated_at",     :null => false
   end
 
+  create_table "contractor_features", :force => true do |t|
+    t.integer  "contractor_id"
+    t.integer  "feature_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "contractors", :force => true do |t|
+    t.string   "specialty"
+    t.string   "name"
+    t.integer  "hire_able_id"
+    t.string   "hire_able_type"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "contractor_id"
+  end
+
   create_table "features", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "value"
+    t.integer  "feature_id"
   end
 
   create_table "houses", :force => true do |t|
@@ -53,6 +71,20 @@ ActiveRecord::Schema.define(:version => 20121111050928) do
     t.integer  "square_footage"
   end
 
+  create_table "professionals", :force => true do |t|
+    t.string   "area_of_service"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.string   "company_name"
+    t.string   "email"
+    t.string   "phonenumber"
+    t.string   "fax"
+    t.string   "ptype"
+    t.integer  "company_num"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
   create_table "properties", :force => true do |t|
     t.decimal  "lot_size",         :precision => 8, :scale => 2
     t.integer  "propertible_id"
@@ -62,6 +94,14 @@ ActiveRecord::Schema.define(:version => 20121111050928) do
     t.string   "address"
     t.float    "latitude"
     t.float    "longitude"
+  end
+
+  create_table "realtors", :force => true do |t|
+    t.string   "name"
+    t.integer  "hire_able_id"
+    t.string   "hire_able_type"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "users", :force => true do |t|
