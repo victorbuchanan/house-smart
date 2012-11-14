@@ -1,5 +1,13 @@
 HouseSmart::Application.routes.draw do
 
+  resources :contractor_features
+
+  resources :realtors
+
+  resources :contractors
+
+  resources :professionals
+
   resources :area_base_prices
 
   get "area_base_price/new"

@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Area of service:</b>
+  <%= @professional.area_of_service %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @professional.longitude %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @professional.latitude %>
+</p>
+
+<p>
+  <b>Company name:</b>
+  <%= @professional.company_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @professional.email %>
+</p>
+
+<p>
+  <b>Phonenumber:</b>
+  <%= @professional.phonenumber %>
+</p>
+
+<p>
+  <b>Fax:</b>
+  <%= @professional.fax %>
+</p>
+
+<p>
+  <b>Ptype:</b>
+  <%= @professional.ptype %>
+</p>
+
+<p>
+  <b>Company num:</b>
+  <%= @professional.company_num %>
+</p>
+
+
+<%= link_to 'Edit', edit_professional_path(@professional) %> |
+<%= link_to 'Back', professionals_path %>
