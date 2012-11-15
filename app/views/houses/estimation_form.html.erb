@@ -14,44 +14,48 @@
 
 
 <div class='well'>
-
+  <h1>house appraisal</h1>
     <%=form_for @house do |f|%>
       <%= f.fields_for :property do |builder| %>
-        <ol>
-            <li>
-
+        <div class="row-fluid">
+          <div class="span6">
+            <h2>dwelling size descriptions</h2>
               <%= f.label :dwelling_type %>
               <%= f.select :dwelling_type, House::DWELLING_TYPE %>
 
               <%= f.label :style%>
-              <%= f.select :style, House::STYLE  %>
+              <%= f.select :style, House::STYLE %>
 
-                  <%= builder.label :address%>
-                  <%=builder.text_field :address%>
-            </li>
-            <li>
               <%=f.label :square_footage%>
               <%=f.text_field :square_footage%>
 
+              <%= builder.label :lot_size%>
+              <%= builder.text_field :lot_size, placeholder:"enter lot size"%>
+          </div>
+          <div class="span6">
+            <h2>bedrooms and bathrooms</h2>
               <%= f.label :bedrooms%>
               <%=f.text_field :bedrooms%>
 
               <%= f.label :bathrooms%>
-              <%=f.text_field :bathrooms%>
-
+              <%=f.text_field :bathrooms%>            
+          </div>
+        </div>
+        <div class="row-fluid">
+          <div class="span6">
+            <h2>location and year built</h2>
               <%= f.label :living_area%>
               <%=f.select :living_area, @areas%>
 
-              <%= builder.label :lot_size%>
-              <%= builder.text_field :lot_size%>
-
               <%=f.label :year_built%>
               <%=f.select :year_built, (1980..2012).to_a.reverse, selected: 2012%>
-            </li>
-            <li>
-              <%= f.submit "get your appraisal", class:"btn"%>
-            </li>
-        </ol>
+          </div>
+        </div>
+        <div class="row-fluid">
+          <div class="span2">
+              <%= f.submit "submit", class:"btn btn-primary btn-block"%>
+          </div>
+        </div>
       <%end%>
     <%end%>
 

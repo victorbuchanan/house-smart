@@ -166,7 +166,6 @@ body {
   background-color: #ffffff;
   padding-top: 60px;
   padding-bottom: 40px;
-  background-image:url("brushed(2).png");
 }
 
 a {
@@ -2152,7 +2151,7 @@ table [class*=span],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/glyphicons-halflings.png");
+  background-image: url("glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }
