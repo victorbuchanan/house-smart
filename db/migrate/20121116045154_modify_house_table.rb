@@ -1,8 +1,9 @@
 class ModifyHouseTable < ActiveRecord::Migration
 
   def change
-    add_column :houses, :square_footage, :integer
-    rename_column :houses, :year_build, :year_built
-  end
 
+    remove_column :houses, :year_build
+    add_column :houses, :year_built, :integer
+    add_column :houses, :square_footage, :integer
+  end
 end

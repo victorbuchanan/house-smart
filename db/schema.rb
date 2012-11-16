@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121111050928) do
+ActiveRecord::Schema.define(:version => 20121116045154) do
 
   create_table "area_base_prices", :force => true do |t|
     t.string   "area_name"
