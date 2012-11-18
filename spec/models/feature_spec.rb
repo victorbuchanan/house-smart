@@ -18,7 +18,7 @@ describe Feature do
 
 
   context "validations" do
-    [:name, :value].each do |attr|
+    [:name, :value, :upgradeable].each do |attr|
       it "#{attr} may be accessed and changed" do
         expect do
           Feature.new(attr => nil)
