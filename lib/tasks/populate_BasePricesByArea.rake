@@ -7,9 +7,14 @@ namespace :populate do
   task :basePrices, [:destroy_all] => [:environment] do |t, args|
     AreaBasePrice.destroy_all  if  args[:destroy_all]
     file = "lib/assets/basePriceData.csv"
-    CSV.foreach(file, :headers => true) do |row|
-      AreaBasePrice.create(:area_name => row[0], :avg_sqft => row[1], :avg_lot => row[2], :avg_year => row[3], :avg_bed => row[4], :avg_bath => row[5], :price_per_sqft => row[6], :price_per_lot => row[7], :price_per_year => row[8], :price_per_bed => row[9], :price_per_bath => row[10])
-    end
+    CSV.foreach(file, :headers => false) do |row|
+      @areaBasePrice = AreaBasePrice.find_by_area_name(row[0])
+      if(@areaBasePrice.nil?)
+        AreaBasePrice.create(:area_name => row[0], :avg_sqft => row[1], :avg_lot => row[2], :avg_year => row[3], :avg_bed => row[4], :avg_bath => row[5], :price_per_sqft => row[6], :price_per_lot => row[7], :price_per_year => row[8], :price_per_bed => row[9], :price_per_bath => row[10])
+      else
+        @areaBasePrice.update_attributes(:avg_sqft => row[1], :avg_lot => row[2], :avg_year => row[3], :avg_bed => row[4], :avg_bath => row[5], :price_per_sqft => row[6], :price_per_lot => row[7], :price_per_year => row[8], :price_per_bed => row[9], :price_per_bath => row[10])
+      end
+      end
   end
 
 end
