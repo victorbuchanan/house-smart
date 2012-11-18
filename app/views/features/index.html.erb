@@ -4,7 +4,7 @@
   <tr>
     <th>Name</th>
     <th>Value</th>
-    <th></th>
+    <th>Upgradeable</th>
     <th></th>
     <th></th>
   </tr>
@@ -13,6 +13,7 @@
   <tr>
     <td><%= feature.name %></td>
     <td><%= feature.value %></td>
+    <td><%= feature.upgradeable %></td>
     <td><%= link_to 'Show', feature %></td>
     <td><%= link_to 'Edit', edit_feature_path(feature) %></td>
     <td><%= link_to 'Destroy', feature, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -8,7 +8,7 @@ namespace :populate do
     Feature.destroy_all  if  args[:destroy_all]
     file = "lib/assets/featuresData.csv"
     CSV.foreach(file, :headers => true) do |row|
-      Feature.create(:name => row[0], :value => row[1])
+      Feature.create(:name => row[0], :value => row[1], :upgradeable => row[2])
         #:value => row[2],
       #}
       end

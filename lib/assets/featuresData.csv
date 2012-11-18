@@ -1,72 +1,72 @@
-Above Ground Pool,15410
-Adult Oriented,21139
-Airport Nearby,28633
-Balcony,14720
-Barn,7380
-Beach Property,29478
-Cable Available,4296
-Clubhouse,5094
-Corner,1180
-Creek Thru,11544
-Cul-de-Sac,2201
-Deck,17775
-Deeded Recreation Facilities,21418
-End Unit,12717
-Exercise Room,5320
-Family Oriented,16408
-Farm,4436
-Fenced Yard,26885
-Flat Site,11809
-Fully Serviced,2592
-Gazebo,28491
-Golf Nearby,1426
-Hedged Yard,16202
-Highspeed Available,6681
-Highway Access,27004
-Hobby Farm,26955
-Hydro,9226
-Indoor Pool,15773
-Inground Pool,9670
-Lake Priviledges,3634
-Lakefront,10292
-Lakeview,16176
-Landscaped,18035
-Mountainview,17351
-Municipal Water,15520
-Natural Gas,27498
-No Thru Road,19220
-Not Landscaped,21532
-Open,4856
-Outdoor Pool,19095
-Park Setting,7182
-Partially Landscaped,10146
-Patio,13244
-Paved Road,23217
-Pet Restrictions,4811
-Phone,17238
-Playground Nearby,12562
-Private,23562
-Private Well,6671
-Public Transit Nearby,13471
-Ravine,15717
-Recreation Nearby,28866
-Recreational,7011
-Riverfront,7272
-Riverview,9776
-Rolling,14984
-School Bus,5936
-Screened Porch,22951
-Shopping Nearby,17715
-Skiing Nearby,10425
-Sloping Lot,21251
-Tennis Court,18523
-Treed Lot,25424
-Underground Sprinkler System,27545
-Verandah,2251
-Walkout,16024
-Water Access,29740
-Water Nearby,5067
-Water Rights,27196
-Waterfront,7822
-Wetlands,27188
-Wooded Area,12904
+Above Ground Pool,15410,true
+Adult Oriented,21139,false
+Airport Nearby,28633,false
+Balcony,14720,true
+Barn,7380,false,false
+Beach Property,29478,false
+Cable Available,4296,true
+Clubhouse,5094,false
+Corner,1180,false
+Creek Thru,11544,false
+Cul-de-Sac,2201,false
+Deck,17775,true
+Deeded Recreation Facilities,21418,false
+End Unit,12717,false
+Exercise Room,5320,true
+Family Oriented,16408,false
+Farm,4436,false
+Fenced Yard,26885,true
+Flat Site,11809,false
+Fully Serviced,2592,false
+Gazebo,28491,true
+Golf Nearby,1426,false
+Hedged Yard,16202,true
+Highspeed Available,6681,true
+Highway Access,27004,false
+Hobby Farm,26955,false
+Hydro,9226,true
+Indoor Pool,15773,true
+Inground Pool,9670,true
+Lake Priviledges,3634,false
+Lakefront,10292,false
+Lakeview,16176,false
+Landscaped,18035,true
+Mountainview,17351,false
+Municipal Water,15520,true
+Natural Gas,27498,true
+No Thru Road,19220,true
+Not Landscaped,21532,false
+Open,4856,false
+Outdoor Pool,19095,true
+Park Setting,7182,false
+Partially Landscaped,10146,true
+Patio,13244,true
+Paved Road,23217,false
+Pet Restrictions,4811,false
+Phone,17238,true
+Playground Nearby,12562,false
+Private,23562,false
+Private Well,6671,false
+Public Transit Nearby,13471,false
+Ravine,15717,false
+Recreation Nearby,28866,false
+Recreational,7011,false
+Riverfront,7272,false
+Riverview,9776,false
+Rolling,14984,false
+School Bus,5936,false
+Screened Porch,22951,true
+Shopping Nearby,17715,false
+Skiing Nearby,10425,false
+Sloping Lot,21251,false
+Tennis Court,18523,true
+Treed Lot,25424,false
+Underground Sprinkler System,27545,true
+Verandah,2251,true
+Walkout,16024,true
+Water Access,29740,false
+Water Nearby,5067,false
+Water Rights,27196,false
+Waterfront,7822,false
+Wetlands,27188,false
+Wooded Area,12904,false
