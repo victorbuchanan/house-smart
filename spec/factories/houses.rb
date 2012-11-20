@@ -5,7 +5,7 @@ FactoryGirl.define do
     style House::STYLE.sample
     dwelling_type House::DWELLING_TYPE.sample
 
-    living_area "kanata"
+    living_area "Vanier"
     square_footage 1500
     bedrooms 3
     bathrooms 2
