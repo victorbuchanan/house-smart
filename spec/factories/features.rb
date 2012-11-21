@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :feature do
-    name "MyString"
+    name ["MyString"]
   end
 end
