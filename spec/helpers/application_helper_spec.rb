@@ -1,5 +1,9 @@
 require "spec_helper"
 
+require 'rake'
+
+Rake.application.init
+Rake.application.load_rakefile  # load rake tasks
 
 describe "ApplicationHelper" do
 
@@ -17,6 +21,7 @@ describe "ApplicationHelper" do
       value.should == 0
     end
     it "returns greater than 0 if there is good house information" do
+      Rake.application["populate:basePrices"].invoke    # load data from csv
 
       house = FactoryGirl.build(:house)
 
