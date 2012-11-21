@@ -1,1 +1,22 @@
-Estimation: <%= calculatePrice(@house, []) %>
+Estimation: <%= calculatePrice(@house, @features) %>
+
+
+<h4> consider these updates to increase the estimated value of your house </h4>
+
+<table class= 'table'>
+  <tr>
+    <th>Feature</th>
+    <th> average price per unit (to be discussed)</th>
+    <th> available contractors </th>
+  </tr>
+
+  <%@missing_upgradeable_features.each do |feature|%>
+    <tr>
+      <td><%=feature.name%></td>
+      <td><%=feature.value%></td>
+      <td>select box here</td>
+    </tr>
+
+  <%end%>
+
+</table>
