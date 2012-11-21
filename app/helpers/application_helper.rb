@@ -14,8 +14,6 @@ module ApplicationHelper
       end
     end
 
-
-
     areaBasePrice = AreaBasePrice.find_by_area_name(house.living_area)
 
     if areaBasePrice.nil?

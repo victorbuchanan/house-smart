@@ -6,6 +6,8 @@ class Property < ActiveRecord::Base
   #-- Validations ------
   validates_presence_of :lot_size, allow_blank: false
 
+  validates_numericality_of :lot_size, :only_integer => true,
+                            :message => ": Square footage must be a number"
 
 
 

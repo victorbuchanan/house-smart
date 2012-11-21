@@ -31,8 +31,23 @@
                 <td>
                 <%= f.select :style, House::STYLE%>
                 </td>
+          </tr>
+          <tr>
+            <td>
+              Number of rooms:
+            </td>
+            <td>
+              <%= f.text_field :bedrooms %>
+            </td>
+          </tr>
+      <tr>
+        <td>
+          Number of bathrooms:
+        </td>
+        <td>
+          <%= f.text_field :bathrooms %>
+        </td>
       </tr>
-
     </table>
 </div>
 
@@ -46,33 +61,9 @@
                 <td>
                     <%= builder.text_field :lot_size %>
                 </td>
-          </tr>
-          <tr>
-                    <td>
-                          Number of rooms:
-                    </td>
-                    <td>
-                          <%= text_field_tag "number of rooms"%>
-                    </td>
-          </tr>
-           <tr>
-              <td>
-                  Number of bathrooms:
-              </td>
-              <td>
-                  <%= text_field_tag "number of bathrooms"%>
-              </td>
-          </tr>
-          <tr>
-              <td>
-
-
-              </td>
-
+             </tr>
       </table>
-
       <%= f.file_field :photo	  %>
-
 </div>
 
 
