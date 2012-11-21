@@ -15,7 +15,7 @@
 
 <div class='well'>
   <h1>house appraisal</h1>
-    <%=form_for @house do |f|%>
+    <%=form_for @house,:method => 'post', url: estimation_results_houses_path do |f|%>
       <%= f.fields_for :property do |builder| %>
         <div class="row-fluid">
           <div class="span6">
@@ -45,18 +45,29 @@
           <div class="span6">
             <h2>location and year built</h2>
               <%= f.label :living_area%>
-              <%=f.select :living_area, @areas%>
+              <%=f.select :living_area,
+                          @area_options%>
 
               <%=f.label :year_built%>
               <%=f.select :year_built, (1980..2012).to_a.reverse, selected: 2012%>
           </div>
         </div>
-        <div class="row-fluid">
+          <%end%>
+
+      <% @feature_options.each do |feature|%>
+          <%=label_tag feature.name%>
+          <%= check_box_tag "features[]", feature.name%>
+      <%end%>
+
+
+
+
+
+          <div class="row-fluid">
           <div class="span2">
               <%= f.submit "submit", class:"btn btn-primary btn-block"%>
           </div>
         </div>
       <%end%>
-    <%end%>
 
 </div>
