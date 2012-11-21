@@ -84,10 +84,17 @@ class HousesController < ApplicationController
   def estimation_form
     @house = House.new
     @house.build_property
-    @areas = AreaBasePrice.all.collect(&:area_name)
+    @area_options = AreaBasePrice.all.collect(&:area_name)
+    @feature_options =  Feature.where(upgradeable: true)
+
+
   end
 
   def estimation_results
-    @house = House.find(params[:id])
+    @house = House.new(params[:house])
+    @current_features = params[:features]
+    @missing_upgradeable_features = Feature.missing_upgradeable_features(@current_features)
+    #raise "#{@features.to_yaml}" if @house
+
   end
 end

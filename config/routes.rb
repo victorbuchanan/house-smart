@@ -24,7 +24,7 @@ HouseSmart::Application.routes.draw do
 
   resources :houses do
     get 'estimation/form',action: 'estimation_form', :on=> :collection
-    get 'estimation/results/:id', action: 'estimation_results', :on=> :collection, as: :estimation_results
+    post 'estimation/results'=> "houses#estimation_results", :on=> :collection, as: :estimation_results
   end
 
   resources :features

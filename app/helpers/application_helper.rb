@@ -7,15 +7,21 @@ module ApplicationHelper
 
     value = 0
     featureValue = 0
-    features_list.each do |f|
-      featureValue += Feature.find_by_name(f).value
+
+    if features_list
+      features_list.each do |f|
+        featureValue += Feature.find_by_name(f).value
+      end
     end
+
+
 
     areaBasePrice = AreaBasePrice.find_by_area_name(house.living_area)
 
     if areaBasePrice.nil?
       return 0
     end
+
 
     value += areaBasePrice.price_per_sqft * house.square_footage
     value += areaBasePrice.price_per_lot * house.property.lot_size

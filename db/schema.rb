@@ -51,8 +51,8 @@ ActiveRecord::Schema.define(:version => 20121118002805) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "value"
-    t.boolean  "upgradeable"
     t.integer  "feature_id"
+    t.boolean  "upgradeable"
   end
 
   create_table "houses", :force => true do |t|
