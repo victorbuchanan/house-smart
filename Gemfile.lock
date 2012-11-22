@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    ZenTest (4.8.2)
     actionmailer (3.2.8)
       actionpack (= 3.2.8)
       mail (~> 2.4.4)
@@ -132,6 +133,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  ZenTest (~> 4.8.2)
   coffee-rails (~> 3.2.1)
   factory_girl_rails (~> 4.0)
   geocoder
