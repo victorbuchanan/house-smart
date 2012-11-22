@@ -3,5 +3,5 @@ rvm:
    - "1.9.3"
   
 script: bundle exec rake db:migrate
-
-# script: bundle exec rspec spec
+script: bundle exec rake db:test:prepare
+script: bundle exec autotest
