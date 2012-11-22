@@ -25,8 +25,6 @@ class House < ActiveRecord::Base
   validates_inclusion_of :bathrooms, :in => 1..20,
                          :message => ": Number of bathrooms must be between 1 and 20"
 
-  validates_inclusion_of :living_area, :in => AreaBasePrice.all.collect(&:area_name),
-                       :message => ": location not found"
 
   validates_numericality_of :square_footage, :only_integer => true,
                               :message => ": Square footage must be a number"
